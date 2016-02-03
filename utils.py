@@ -9,11 +9,11 @@ def fact(n):
     Post: Returns the factorial of 'n'.
     Throws: ValueError if n < 0
     """
-    if n < 0: raise ValueError('Err')
-  
-    result = 1
+    if n < 0:
+        raise ValueError('Err')
+        result = 1
     for i in range(1, n+1):
-		result *= i
+        result *= i
  
     return result        
 
@@ -43,17 +43,17 @@ def integrate(function, lower, upper):
           of the specified 'function'.
     """
     steps = 100
-   	h = (upper - lower) / steps
+    h = (upper - lower) / steps
     x = lower
-	integral = 0
+    integral = 0
 	
     for i in range(steps + 1):
-         if i == 0 or i == steps:
+        if i == 0 or i == steps:
             integral += eval(function, {}, {'x': x})
-       elif i % 2 == 0:
-           integral += 2 * eval(function, {}, {'x': x})
+        elif i % 2 == 0:
+            integral += 2 * eval(function, {}, {'x': x})
         else:
-           integral += 4 * eval(function, {}, {'x': x})
+            integral += 4 * eval(function, {}, {'x': x})
  
         x += h
  

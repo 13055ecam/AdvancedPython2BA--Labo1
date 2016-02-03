@@ -14,7 +14,7 @@ class TestUtils(unittest.TestCase):
     
     def test_roots(self):
     	self.assertEqual(utils.roots(1, 2, 1), (-1))
-		self.assertEqual(utils.roots(1, 0, 2), ())
+	self.assertEqual(utils.roots(1, 0, 2), ())
    
     def test_integrate(self):
     	self.assertAlmostEquals(utils.integrate('x', 0, 3), 0.5)
