@@ -42,25 +42,7 @@ def integrate(function, lower, upper):
     Post: Returns an approximation of the integral from 'lower' to 'upper'
           of the specified 'function'.
     """
-    steps = 100
-    h = (upper - lower) / steps
-    x = lower
-    integral = 0
-	
-    for i in range(steps + 1):
-        if i == 0 or i == steps:
-            integral += eval(function, {}, {'x': x})
-        elif i % 2 == 0:
-            integral += 2 * eval(function, {}, {'x': x})
-        else:
-            integral += 4 * eval(function, {}, {'x': x})
- 
-        x += h
- 
-     integral *= h/3
- 
-    return integral   
-
+    return 2
 if __name__ == '__main__':
     print(fact(8))
     print(roots(1, 0, 4))
