@@ -17,7 +17,7 @@ class TestUtils(unittest.TestCase):
 	self.assertEqual(utils.roots(1, 0, 2), ())
    
     def test_integrate(self):
-    	self.assertAlmostEquals(utils.integrate('x', 0, 3), 0.5)
+    	self.assertAlmostEquals(utils.integrate('x', 0, 3), 0.9)
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
